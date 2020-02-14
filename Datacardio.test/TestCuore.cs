@@ -192,6 +192,7 @@ namespace Datacardio.test
             double frequenza = CardioLibrary.calcolicuore.ConsumoCalorieDonna(55, 102.5, 15, 200);
             Assert.AreEqual(calorie, frequenza);
 
+
         }
        
 
