@@ -47,6 +47,7 @@ namespace CardioLibrary
             double Calorie = (anni * 0.2017) + (peso * 0.199) + (media * 0.6309) - 55.0969;
             double calorie_bruciate = Calorie * esercizio / 4.184;
             return calorie_bruciate;
+
         }
         public static double ConsumoCalorieDonna(double peso, double media, double anni, double esercizio) //punto3
         {
