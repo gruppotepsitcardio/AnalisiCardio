@@ -55,10 +55,22 @@ namespace CardioLibrary
             double calorie_bruciate = Calorie * esercizio / 4.184;
             return calorie_bruciate;
         }
+       public static string Battito(int battito)
+        {
+            if (battito < 60)
+            {
+                return "bradicardico";
+            }
+            else if (battito > 60 && battito<=100)
+            {
+                return "normale";
+            }
+            else
+            {
+                return  "tachicardico";
+            }
+
+        }
        
-           
-        
-
-
     }
 }
