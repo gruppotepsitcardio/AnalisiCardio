@@ -517,6 +517,7 @@ namespace Datacardio.test
             Assert.AreEqual(aspettata, spesa_emnergetica5);
 
 
+
         }
 
 
