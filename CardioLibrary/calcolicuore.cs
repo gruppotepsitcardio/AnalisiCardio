@@ -69,8 +69,19 @@ namespace CardioLibrary
             {
                 return  "tachicardico";
             }
+       }
+        public static double spesa_energetica_corsa(double km, double kg)
+        {
+            double corsa = 0.9 * km * kg;
+            return corsa;
+          
+        }
+        public static double spesa_energetica_camminata(double km, double kg)
+        {
+            double camminata = 0.50 * km * kg;
+            return camminata;
 
         }
-       
+
     }
 }

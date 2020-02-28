@@ -317,7 +317,7 @@ namespace Datacardio.test
             Assert.AreEqual(calorie, frequenza2);
 
       
-            double frequenza3 = CardioLibrary.calcolicuore.ConsumoCalorieDonna(peso, media, anni, esercizio);
+            double frequenza3 = CardioLibrary.calcolicuore.ConsumoCalorieUomo(peso, media, anni, esercizio);
             Assert.AreEqual(calorie, frequenza3);
 
 
@@ -393,6 +393,133 @@ namespace Datacardio.test
 
 
         }
+        [TestMethod]
+        public void corsa1()
+        {
+            double risultato = 62.1;
+            double spesa_energetica = CardioLibrary.calcolicuore.spesa_energetica_corsa(1,69);
+            Assert.AreEqual(risultato, spesa_energetica);
+
+        }
+        [TestMethod]
+        public void corsa2()
+        {
+            double risultato = 160.704;
+            double spesa_energetica = CardioLibrary.calcolicuore.spesa_energetica_corsa(2.88, 62);
+            Assert.AreEqual(risultato, spesa_energetica);
+
+        }
+        [TestMethod]
+        public void corsa3()
+        {
+            double risultato = 225;
+            double spesa_energetica = CardioLibrary.calcolicuore.spesa_energetica_corsa(5, 50);
+            Assert.AreEqual(risultato, spesa_energetica);
+
+        }
+        [TestMethod]
+        public void corsa4()
+        {
+            double risultato = 17521.2;
+            double spesa_energetica = CardioLibrary.calcolicuore.spesa_energetica_corsa(314, 62);
+            Assert.AreEqual(risultato, spesa_energetica);
+
+        }
+        [TestMethod]
+        public void corsa5()
+        {
+            double risultato = 252;
+            double spesa_energetica = CardioLibrary.calcolicuore.spesa_energetica_corsa(3.5, 80);
+            Assert.AreEqual(risultato, spesa_energetica);
+
+        }
+        [DataTestMethod]
+        [DataRow(20, 67,1206)]
+        [DataRow(310, 45,12555)]
+        [DataRow(16, 88,1267.2)]
+        [DataRow(2, 70,126)]
+        [DataRow(4.5,90,364.5)]
+        public void Spesa_enerigetica_CorsaData(double km, double kg,double aspettata)
+        {
+
+            double spesa_emnergetica1= CardioLibrary.calcolicuore.spesa_energetica_corsa(km,kg);
+            Assert.AreEqual(aspettata, spesa_emnergetica1);
+            double spesa_emnergetica2 = CardioLibrary.calcolicuore.spesa_energetica_corsa(km,kg);
+            Assert.AreEqual(aspettata, spesa_emnergetica2);
+            double spesa_emnergetica3 = CardioLibrary.calcolicuore.spesa_energetica_corsa(km, kg);
+            Assert.AreEqual(aspettata, spesa_emnergetica3);
+            double spesa_emnergetica4 = CardioLibrary.calcolicuore.spesa_energetica_corsa(km,kg);
+            Assert.AreEqual(aspettata, spesa_emnergetica4);
+            double spesa_emnergetica5 = CardioLibrary.calcolicuore.spesa_energetica_corsa(km,kg);
+            Assert.AreEqual(aspettata, spesa_emnergetica5);
+
+
+        }
+        [TestMethod]
+        public void camminata1()
+        {
+            double risultato = 164;
+            double spesa_energetica = CardioLibrary.calcolicuore.spesa_energetica_camminata(4, 82);
+            Assert.AreEqual(risultato, spesa_energetica);
+
+        }
+
+        public void camminata2()
+        {
+            double risultato = 90;
+            double spesa_energetica = CardioLibrary.calcolicuore.spesa_energetica_camminata(2, 90);
+            Assert.AreEqual(risultato, spesa_energetica);
+
+        }
+        [TestMethod]
+        public void camminata3()
+        {
+            double risultato = 33.75;
+            double spesa_energetica = CardioLibrary.calcolicuore.spesa_energetica_camminata(1.5, 45);
+            Assert.AreEqual(risultato, spesa_energetica);
+
+        }
+        [TestMethod]
+        public void camminata4()
+        {
+            double risultato = 240;
+            double spesa_energetica = CardioLibrary.calcolicuore.spesa_energetica_camminata(8, 60);
+            Assert.AreEqual(risultato, spesa_energetica);
+
+        }
+        [TestMethod]
+        public void camminata5()
+        {
+            double risultato = 350;
+            double spesa_energetica = CardioLibrary.calcolicuore.spesa_energetica_camminata(10, 70);
+            Assert.AreEqual(risultato, spesa_energetica);
+
+        }
+        [DataTestMethod]
+        [DataRow(20, 67, 670)]
+        [DataRow(3, 45, 67.5)]
+        [DataRow(6, 90, 270)]
+        [DataRow(8, 70, 280)]
+        [DataRow(9, 50, 225)]
+        public void Spesa_enerigetica_CamminataData(double km, double kg, double aspettata)
+        {
+
+            double spesa_emnergetica1 = CardioLibrary.calcolicuore.spesa_energetica_camminata(km, kg);
+            Assert.AreEqual(aspettata, spesa_emnergetica1);
+            double spesa_emnergetica2 = CardioLibrary.calcolicuore.spesa_energetica_camminata(km, kg);
+            Assert.AreEqual(aspettata, spesa_emnergetica2);
+            double spesa_emnergetica3 = CardioLibrary.calcolicuore.spesa_energetica_camminata(km, kg);
+            Assert.AreEqual(aspettata, spesa_emnergetica3);
+            double spesa_emnergetica4 = CardioLibrary.calcolicuore.spesa_energetica_camminata(km, kg);
+            Assert.AreEqual(aspettata, spesa_emnergetica4);
+            double spesa_emnergetica5 = CardioLibrary.calcolicuore.spesa_energetica_camminata(km, kg);
+            Assert.AreEqual(aspettata, spesa_emnergetica5);
+
+
+        }
+
+
+
     }
 }
 
