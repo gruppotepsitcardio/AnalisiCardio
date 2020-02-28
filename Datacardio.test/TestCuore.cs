@@ -193,7 +193,16 @@ namespace Datacardio.test
             Assert.AreEqual(calorie, frequenza);
 
         }
-       
+        [TestMethod]
+        public void MediaGiornalieraBattitiCardiacitest()
+        {
+            double bpm = 197;
+            double totbpmensili = 1440;
+            double mediavaloreaaspettato = 1,136805555555556;
+            double media = CardioLibrary.calcolicuore.MediaGiornalieraBattitiCardiaci(bpm + totbpmensili / totbpmensili);
+            Assert.AreEqual(media, mediavaloreaaspettato);
+
+        }
 
     }
 }

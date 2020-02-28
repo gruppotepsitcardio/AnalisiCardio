@@ -1,5 +1,6 @@
 ﻿using System;
 
+
 namespace CardioLibrary
 {
     public class calcolicuore
@@ -54,9 +55,13 @@ namespace CardioLibrary
             double calorie_bruciate = Calorie * esercizio / 4.184;
             return calorie_bruciate;
         }
-       
-           
-        
+        public static double MediaGiornalieraBattitiCardiaci(double media,double bpm,double totbpmensili) //punto 4
+        {
+            media = bpm+totbpmensili/totbpmensili;
+            return media;
+        }
+
+
 
     }
 }
