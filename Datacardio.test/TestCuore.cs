@@ -494,6 +494,7 @@ namespace Datacardio.test
             double spesa_energetica = CardioLibrary.calcolicuore.spesa_energetica_camminata(10, 70);
             Assert.AreEqual(risultato, spesa_energetica);
 
+
         }
         [DataTestMethod]
         [DataRow(20, 67, 670)]
