@@ -60,16 +60,16 @@ namespace CardioLibrary
             double mediabpm = bpm / 2;
             return mediabpm;
         }
-        public static double ConsumoCalorieUomo(double peso, double mediabpm, double anni, double esercizio) //parametri consumo calorico uomo
+        public static double ConsumoCalorieUomo(double peso, double media, double anni, double esercizio) //parametri consumo calorico uomo
         {
-            double Calorie = (anni * 0.2017) + (peso * 0.199) + (mediabpm * 0.6309) - 55.0969; //calcolo consumo calorico uomo
+            double Calorie = (anni * 0.2017) + (peso * 0.199) + (media * 0.6309) - 55.0969; //calcolo consumo calorico uomo
             double calorie_bruciate = Calorie * esercizio / 4.184; //calcolo consumo calorico uomo
             return calorie_bruciate;
 
         }
-        public static double ConsumoCalorieDonna(double peso, double mediabpm, double anni, double esercizio) //parametri consumo calorico donna
+        public static double ConsumoCalorieDonna(double peso, double media, double anni, double esercizio) //parametri consumo calorico donna
         {
-            double Calorie = (anni * 0.074) + (peso * 0.126) + (mediabpm * 0.4472) - 20.4022; //parametri consumo calorico donna
+            double Calorie = (anni * 0.074) + (peso * 0.126) + (media * 0.4472) - 20.4022; //parametri consumo calorico donna
             double calorie_bruciate = Calorie * esercizio / 4.184; //parametri consumo calorico donna
             return calorie_bruciate;
         }
@@ -88,9 +88,23 @@ namespace CardioLibrary
 
         }
 
-        //////////////////////////////////////////////////////////////esercizio5/////////////////////////////////////////////////////////////////////////////////////
+        //////////////////////////////////////////////////////////////esercizio5///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    }//rimane da fare il punto5 e basta.
+        public static int Media_bpm(int bpm1, int bpm2, int bpm3, int bpm4, int bpm5, int bpm6, int bpm7, int bpm8, int bpm9, int bpm10, int bpm11,int bpm12,int bpm13,int bpm14,int bpm15,int bpm16,int bpm17,int bpm18,int bpm19,int bpm20,int bpm21,int bpm22, int bpm23, int bpm24)
+        {
+            int calcolo = bpm1  + bpm2  + bpm3 + bpm4 + bpm5 + bpm6 + bpm7 + bpm8 + bpm9 + bpm10 + bpm11 + bpm12 + bpm13 + bpm14 + bpm15 + bpm16 + bpm17 + bpm18 + bpm19 + bpm20 + bpm21 + bpm22 + bpm23 + bpm24;
+            int media = calcolo / 24;
+            return media;
+        }
+        public static int Riposo_bpm(int bpm1, int bpm2, int bpm3, int bpm4, int bpm5, int bpm6, int bpm7)
+        {
+            int calcoloriposo = bpm1 + bpm2 + bpm3 + bpm4 + bpm5 + bpm6 + bpm7;
+            int riposo = calcoloriposo / 7;
+            return riposo;
+        }
+        
+
+    }
 
 
 }
