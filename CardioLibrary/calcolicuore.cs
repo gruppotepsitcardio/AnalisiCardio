@@ -101,6 +101,7 @@ namespace CardioLibrary
             int calcoloriposo = bpm1 + bpm2 + bpm3 + bpm4 + bpm5 + bpm6 + bpm7;
             int riposo = calcoloriposo / 7;
             return riposo;
+
         }
         
 

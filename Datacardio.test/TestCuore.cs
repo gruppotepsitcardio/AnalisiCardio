@@ -581,6 +581,7 @@ namespace Datacardio.test
             int Media = CardioLibrary.calcolicuore.Riposo_bpm(46,48,45,56,50,52,47);
             Assert.AreEqual(risultato, Media);
         }
+
     }
 }
        
