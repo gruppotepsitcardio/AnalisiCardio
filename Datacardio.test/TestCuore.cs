@@ -1,4 +1,4 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Datacardio.test
 {
@@ -574,45 +574,122 @@ namespace Datacardio.test
             Assert.AreEqual(aspettata, media5);
         }
 
-        [TestMethod]
+           [TestMethod]
         public void riposo1()
         {
             int risultato = 49;
             int Media = CardioLibrary.calcolicuore.Riposo_bpm(46, 48, 45, 56, 50, 52, 47);
             Assert.AreEqual(risultato, Media);
         }
-        [DataTestMethod]
-        [DataRow(54, 56, 48, 48, 50, 51, 46, 50)]
-        [DataRow(54, 56, 52, 53, 50, 55, 45, 52)]
-        [DataRow(48, 46, 47, 58, 50, 51, 46, 49)]
-        [DataRow(54, 57, 58, 48, 40, 41, 46, 49)]
-        public void riposo2(int bpm1, int bpm2, int bpm3, int bpm4, int bpm5, int bpm6, int bpm7, int risposta_aspettata)
+        [TestMethod]
+        public void riposo2()
         {
-            int MediaRiposo = CardioLibrary.calcolicuore.Riposo_bpm(bpm1, bpm2, bpm3, bpm4, bpm5, bpm6, bpm7);
-            Assert.AreEqual(risposta_aspettata, MediaRiposo);
+            int risultato = 53;
+            int Media = CardioLibrary.calcolicuore.Riposo_bpm(56, 58, 55, 56, 50, 52, 47);
+            Assert.AreEqual(risultato, Media);
         }
         [TestMethod]
-        public void Variabilit�()
+        public void riposo3()
         {
-            double risultato = 0.0085;
-            double variabilit� = CardioLibrary.calcolicuore.Variabilit�_bpm(51);
-            Assert.AreEqual(risultato, variabilit�);
-
-
+            int risultato = 45;
+            int Media = CardioLibrary.calcolicuore.Riposo_bpm(46, 38, 45, 56, 40, 42, 53);
+            Assert.AreEqual(risultato, Media);
+        }
+        [TestMethod]
+        public void riposo4()
+        {
+            int risultato = 41;
+            int Media = CardioLibrary.calcolicuore.Riposo_bpm(40, 38, 45, 46, 40, 41, 43);
+            Assert.AreEqual(risultato, Media);
+        }
+        [TestMethod]
+        public void riposo5()
+        {
+            int risultato = 47;
+            int Media = CardioLibrary.calcolicuore.Riposo_bpm(44, 48, 45, 50, 46, 52, 47);
+            Assert.AreEqual(risultato, Media);
         }
         [DataTestMethod]
-        [DataRow(54,0.0009)]
-        [DataRow(52, 0.00086)]
-        [DataRow(48, 0.0008)]
-        [DataRow(45,0.0)]
-        public void Variabilit�1(int bpm, double risposta_aspettata)
+        [DataRow(54, 56, 48, 48, 50, 51, 46, 50)]
+        [DataRow(50, 46, 48, 53, 50, 55, 45, 49)]
+        [DataRow(48, 36, 47, 58, 50, 51, 46, 48)]
+        [DataRow(54, 47, 38, 48, 40, 41, 36, 43)]
+        [DataRow(44, 37, 38, 48, 40, 41, 39, 41)]
+        public void riposodata(int bpm1, int bpm2, int bpm3, int bpm4, int bpm5, int bpm6, int bpm7, int risposta_aspettata)
         {
-            double Variabilit� = CardioLibrary.calcolicuore.Variabilit�_bpm(bpm);
-            Assert.AreEqual(risposta_aspettata, Variabilit�);
+            int MediaRiposo1 = CardioLibrary.calcolicuore.Riposo_bpm(bpm1, bpm2, bpm3, bpm4, bpm5, bpm6, bpm7);
+            Assert.AreEqual(risposta_aspettata, MediaRiposo1);
+            int MediaRiposo2 = CardioLibrary.calcolicuore.Riposo_bpm(bpm1, bpm2, bpm3, bpm4, bpm5, bpm6, bpm7);
+            Assert.AreEqual(risposta_aspettata, MediaRiposo2);
+            int MediaRiposo3 = CardioLibrary.calcolicuore.Riposo_bpm(bpm1, bpm2, bpm3, bpm4, bpm5, bpm6, bpm7);
+            Assert.AreEqual(risposta_aspettata, MediaRiposo3);
+            int MediaRiposo4 = CardioLibrary.calcolicuore.Riposo_bpm(bpm1, bpm2, bpm3, bpm4, bpm5, bpm6, bpm7);
+            Assert.AreEqual(risposta_aspettata, MediaRiposo4);
+            int MediaRiposo5 = CardioLibrary.calcolicuore.Riposo_bpm(bpm1, bpm2, bpm3, bpm4, bpm5, bpm6, bpm7);
+            Assert.AreEqual(risposta_aspettata, MediaRiposo5);
+        }
+
+        
+        [TestMethod]
+        public void Variabilità1()
+        {
+            double risultato = 3;
+            double variabilitŕ = CardioLibrary.calcolicuore.Variabilità_bpm(51);
+            Assert.AreEqual(risultato, variabilitŕ);
+        }
+        [TestMethod]
+        public void Variabilità2()
+        {
+            double risultato = 2;
+            double variabilitŕ = CardioLibrary.calcolicuore.Variabilità_bpm(38);
+            Assert.AreEqual(risultato, variabilitŕ);
+        }
+        [TestMethod]
+        public void Variabilità3()
+        {
+            double risultato = 2;
+            double variabilitŕ = CardioLibrary.calcolicuore.Variabilità_bpm(44);
+            Assert.AreEqual(risultato, variabilitŕ);
+        }
+        [TestMethod]
+        public void Variabilità4()
+        {
+            double risultato = 3;
+            double variabilitŕ = CardioLibrary.calcolicuore.Variabilità_bpm(55);
+            Assert.AreEqual(risultato, variabilitŕ);
+        }
+        [TestMethod]
+        public void Variabilità5()
+        {
+            double risultato = 2;
+            double variabilitŕ = CardioLibrary.calcolicuore.Variabilità_bpm(36);
+            Assert.AreEqual(risultato, variabilitŕ);
+        }
+        [DataTestMethod]
+        [DataRow(34, 2)]
+        [DataRow(42, 2)]
+        [DataRow(38, 2)]
+        [DataRow(50, 3)]
+        [DataRow(53, 3)]
+        public void VariabilitàData(int bpm, double risposta_aspettata)
+        {
+            double Variabilità1= CardioLibrary.calcolicuore.Variabilità_bpm(bpm);
+            Assert.AreEqual(risposta_aspettata, Variabilità1);
+            double Variabilità2 = CardioLibrary.calcolicuore.Variabilità_bpm(bpm);
+            Assert.AreEqual(risposta_aspettata, Variabilità2);
+            double Variabilità3 = CardioLibrary.calcolicuore.Variabilità_bpm(bpm);
+            Assert.AreEqual(risposta_aspettata, Variabilità3);
+            double Variabilità4 = CardioLibrary.calcolicuore.Variabilità_bpm(bpm);
+            Assert.AreEqual(risposta_aspettata, Variabilità4);
+            double Variabilità5 = CardioLibrary.calcolicuore.Variabilità_bpm(bpm);
+            Assert.AreEqual(risposta_aspettata, Variabilità5);
 
         }
     }
 }
+
+    
+
 
 
 

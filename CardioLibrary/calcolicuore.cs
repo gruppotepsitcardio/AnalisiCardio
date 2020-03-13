@@ -91,22 +91,22 @@ namespace CardioLibrary
 
         //////////////////////////////////////////////////////////////esercizio5///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-        public static int Media_bpm(int bpm1, int bpm2, int bpm3, int bpm4, int bpm5, int bpm6, int bpm7, int bpm8, int bpm9, int bpm10, int bpm11,int bpm12,int bpm13,int bpm14,int bpm15,int bpm16,int bpm17,int bpm18,int bpm19,int bpm20,int bpm21,int bpm22, int bpm23, int bpm24)
+        public static int Media_bpm(int bpm1, int bpm2, int bpm3, int bpm4, int bpm5, int bpm6, int bpm7, int bpm8, int bpm9, int bpm10, int bpm11,int bpm12,int bpm13,int bpm14,int bpm15,int bpm16,int bpm17,int bpm18,int bpm19,int bpm20,int bpm21,int bpm22, int bpm23, int bpm24)// media giornaliera
         {
             int calcolo = bpm1  + bpm2  + bpm3 + bpm4 + bpm5 + bpm6 + bpm7 + bpm8 + bpm9 + bpm10 + bpm11 + bpm12 + bpm13 + bpm14 + bpm15 + bpm16 + bpm17 + bpm18 + bpm19 + bpm20 + bpm21 + bpm22 + bpm23 + bpm24;
             int media = calcolo / 24;
             return media;
         }
-        public static int Riposo_bpm(int bpm1, int bpm2, int bpm3, int bpm4, int bpm5, int bpm6, int bpm7)
+        public static int Riposo_bpm(int bpm1, int bpm2, int bpm3, int bpm4, int bpm5, int bpm6, int bpm7)// battiti di 7 giorni per trovare la media dei battiti a riposo
         {
             int calcoloriposo = bpm1 + bpm2 + bpm3 + bpm4 + bpm5 + bpm6 + bpm7;
             int riposo = calcoloriposo / 7;
             return riposo;
 
         }
-        public static double Variabilità_bpm(int bpm)
+        public static double Variabilità_bpm(int bpm)// e la variabilità tra un battito e l'altro in  millesecondi
         {
-            double Variabilità = bpm / 60 / 1000;
+            double Variabilità = bpm  * 60 / 1000;
             return Variabilità;
         }
 
