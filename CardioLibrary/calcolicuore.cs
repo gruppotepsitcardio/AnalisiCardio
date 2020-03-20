@@ -8,13 +8,13 @@ namespace CardioLibrary
         ///////////////////////////////////////////////////////////////esercizio1//////////////////////////////////////////////////////////////////////////////////////
         public static int Cardio(int anni)
         {
-            int bpmmax = 220 - anni;
-            if (bpmmax > 0)
+            int bpmMax = 220 - anni;
+            if (bpmMax > 0)
             {
-                return bpmmax;
+                return bpmMax;
             }
 
-            return bpmmax;
+            return bpmMax;
 
         }
         public static int frequenzaCardiomax(int bpmMax)
