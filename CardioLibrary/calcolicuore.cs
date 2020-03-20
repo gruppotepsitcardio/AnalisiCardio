@@ -17,20 +17,20 @@ namespace CardioLibrary
             return bpmmax;
 
         }
-        public static int frequenzaCardiomax(int bpm)
+        public static int frequenzaCardiomax(int bpmMax)
         {
-            int max = (90 * bpm / 100);
+            int max = (90 * bpmMax / 100);
             return max;
         }
-        public static int frequenzaCardiomin(int bpm)
+        public static int frequenzaCardiomin(int bpmMax)
         {
 
-            int min = (70 * bpm / 100);
+            int min = (70 * bpmMax / 100);
             return min;
         }
-        public static int frequenzaCardioGym(int bpm)
+        public static int frequenzaCardioGym(int bpmMax)
         {
-            int frequenza = ((70 * bpm / 100) + (90 * bpm / 100));
+            int frequenza = ((70 * bpmMax / 100) + (90 * bpmMax / 100));
             int mediaGym = frequenza / 2;
             return mediaGym;
         }
