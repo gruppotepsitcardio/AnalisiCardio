@@ -574,7 +574,7 @@ namespace Datacardio.test
             Assert.AreEqual(aspettata, media5);
         }
 
-           [TestMethod]
+        [TestMethod]
         public void riposo1()
         {
             int risultato = 49;
@@ -615,7 +615,7 @@ namespace Datacardio.test
         [DataRow(48, 36, 47, 58, 50, 51, 46, 48)]
         [DataRow(54, 47, 38, 48, 40, 41, 36, 43)]
         [DataRow(44, 37, 38, 48, 40, 41, 39, 41)]
-        public void riposodata(int bpm1, int bpm2, int bpm3, int bpm4, int bpm5, int bpm6, int bpm7, int risposta_aspettata)
+        public void riposodta(int bpm1, int bpm2, int bpm3, int bpm4, int bpm5, int bpm6, int bpm7, int risposta_aspettata)
         {
             int MediaRiposo1 = CardioLibrary.calcolicuore.Riposo_bpm(bpm1, bpm2, bpm3, bpm4, bpm5, bpm6, bpm7);
             Assert.AreEqual(risposta_aspettata, MediaRiposo1);
@@ -628,52 +628,50 @@ namespace Datacardio.test
             int MediaRiposo5 = CardioLibrary.calcolicuore.Riposo_bpm(bpm1, bpm2, bpm3, bpm4, bpm5, bpm6, bpm7);
             Assert.AreEqual(risposta_aspettata, MediaRiposo5);
         }
-
-        
         [TestMethod]
         public void Variabilità1()
         {
-            double risultato = 3;
-            double variabilitŕ = CardioLibrary.calcolicuore.Variabilità_bpm(51);
-            Assert.AreEqual(risultato, variabilitŕ);
+            double risultato = 3.06;
+            double variabilità1 = CardioLibrary.calcolicuore.Variabilità_bpm(51);
+            Assert.AreEqual(risultato, variabilità1);
         }
         [TestMethod]
         public void Variabilità2()
         {
-            double risultato = 2;
-            double variabilitŕ = CardioLibrary.calcolicuore.Variabilità_bpm(38);
-            Assert.AreEqual(risultato, variabilitŕ);
+            double risultato = 2.28;
+            double variabilit2 = CardioLibrary.calcolicuore.Variabilità_bpm(38);
+            Assert.AreEqual(risultato, variabilit2);
         }
         [TestMethod]
         public void Variabilità3()
         {
-            double risultato = 2;
-            double variabilitŕ = CardioLibrary.calcolicuore.Variabilità_bpm(44);
-            Assert.AreEqual(risultato, variabilitŕ);
+            double risultato = 2.64;
+            double variabilità3 = CardioLibrary.calcolicuore.Variabilità_bpm(44);
+            Assert.AreEqual(risultato, variabilità3);
         }
         [TestMethod]
         public void Variabilità4()
         {
-            double risultato = 3;
-            double variabilitŕ = CardioLibrary.calcolicuore.Variabilità_bpm(55);
-            Assert.AreEqual(risultato, variabilitŕ);
+            double risultato = 3.3;
+            double variabilità4 = CardioLibrary.calcolicuore.Variabilità_bpm(55);
+            Assert.AreEqual(risultato, variabilità4);
         }
         [TestMethod]
         public void Variabilità5()
         {
-            double risultato = 2;
-            double variabilitŕ = CardioLibrary.calcolicuore.Variabilità_bpm(36);
-            Assert.AreEqual(risultato, variabilitŕ);
+            double risultato = 2.16;
+            double variabilità5 = CardioLibrary.calcolicuore.Variabilità_bpm(36);
+            Assert.AreEqual(risultato, variabilità5);
         }
         [DataTestMethod]
-        [DataRow(34, 2)]
-        [DataRow(42, 2)]
-        [DataRow(38, 2)]
+        [DataRow(34, 2.04)]
+        [DataRow(42, 2.52)]
+        [DataRow(38, 2.28)]
         [DataRow(50, 3)]
-        [DataRow(53, 3)]
-        public void VariabilitàData(int bpm, double risposta_aspettata)
+        [DataRow(53, 3.18)]
+        public void VariabilitàData(double bpm, double risposta_aspettata)
         {
-            double Variabilità1= CardioLibrary.calcolicuore.Variabilità_bpm(bpm);
+            double Variabilità1 = CardioLibrary.calcolicuore.Variabilità_bpm(bpm);
             Assert.AreEqual(risposta_aspettata, Variabilità1);
             double Variabilità2 = CardioLibrary.calcolicuore.Variabilità_bpm(bpm);
             Assert.AreEqual(risposta_aspettata, Variabilità2);
@@ -687,12 +685,3 @@ namespace Datacardio.test
         }
     }
 }
-
-    
-
-
-
-
-
-
-
