@@ -55,17 +55,6 @@ namespace Datacardio.test
             double frequenza = CardioLibrary.calcolicuore.Cardio(anni);
             Assert.AreEqual(bpm, frequenza);
 
-            double frequenza2 = CardioLibrary.calcolicuore.Cardio(anni);
-            Assert.AreEqual(bpm, frequenza2);
-
-            double frequenza3 = CardioLibrary.calcolicuore.Cardio(anni);
-            Assert.AreEqual(bpm, frequenza3);
-
-            double frequenza4 = CardioLibrary.calcolicuore.Cardio(anni);
-            Assert.AreEqual(bpm, frequenza4);
-
-            double frequenza5 = CardioLibrary.calcolicuore.Cardio(anni);
-            Assert.AreEqual(bpm, frequenza5);
 
         }
         [TestMethod]
@@ -117,17 +106,9 @@ namespace Datacardio.test
         public void FrequenzaMinimaGymData(int bpm, int aspettata)
         {
 
-            double frequenza1 = CardioLibrary.calcolicuore.frequenzaCardiomin(bpm);
-            Assert.AreEqual(aspettata, frequenza1);
-            double frequenza2 = CardioLibrary.calcolicuore.frequenzaCardiomin(bpm);
-            Assert.AreEqual(aspettata, frequenza2);
-            double frequenza3 = CardioLibrary.calcolicuore.frequenzaCardiomin(bpm);
-            Assert.AreEqual(aspettata, frequenza3);
-            double frequenza4 = CardioLibrary.calcolicuore.frequenzaCardiomin(bpm);
-            Assert.AreEqual(aspettata, frequenza4);
-            double frequenza5 = CardioLibrary.calcolicuore.frequenzaCardiomin(bpm);
-            Assert.AreEqual(aspettata, frequenza5);
-
+            double frequenzaMinGym = CardioLibrary.calcolicuore.frequenzaCardiomin(bpm);
+            Assert.AreEqual(aspettata, frequenzaMinGym);
+           
 
         }
 
@@ -175,25 +156,10 @@ namespace Datacardio.test
         public void FrequenzaMassimaGymData(int bpm, int massima)
         {
 
-            int frequenza1 = CardioLibrary.calcolicuore.frequenzaCardiomax(bpm);
-            Assert.AreEqual(massima, frequenza1);
+            int frequenzaMaxGym = CardioLibrary.calcolicuore.frequenzaCardiomax(bpm);
+            Assert.AreEqual(massima, frequenzaMaxGym);
 
-            int frequenza2 = CardioLibrary.calcolicuore.frequenzaCardiomax(bpm);
-            Assert.AreEqual(massima, frequenza2);
-
-
-            int frequenza3 = CardioLibrary.calcolicuore.frequenzaCardiomax(bpm);
-            Assert.AreEqual(massima, frequenza3);
-
-
-
-            int frequenza4 = CardioLibrary.calcolicuore.frequenzaCardiomax(bpm);
-            Assert.AreEqual(massima, frequenza4);
-
-
-
-            int frequenza5 = CardioLibrary.calcolicuore.frequenzaCardiomax(bpm);
-            Assert.AreEqual(massima, frequenza5);
+           
         }
 
 
@@ -247,24 +213,11 @@ namespace Datacardio.test
         public void FrequenzaCardioData(int bpm, int frequenzaGinnastica)
         {
 
-            double bpm1 = CardioLibrary.calcolicuore.frequenzaCardioGym(bpm);
-            Assert.AreEqual(frequenzaGinnastica, bpm1);
+            double bpmEfficiente = CardioLibrary.calcolicuore.frequenzaCardioGym(bpm);
+            Assert.AreEqual(frequenzaGinnastica, bpmEfficiente);
 
 
-            double bpm2 = CardioLibrary.calcolicuore.frequenzaCardioGym(bpm);
-            Assert.AreEqual(frequenzaGinnastica, bpm2);
-
-
-            double bpm3 = CardioLibrary.calcolicuore.frequenzaCardioGym(bpm);
-            Assert.AreEqual(frequenzaGinnastica, bpm3);
-
-
-            double bpm4 = CardioLibrary.calcolicuore.frequenzaCardioGym(bpm);
-            Assert.AreEqual(frequenzaGinnastica, bpm4);
-
-
-            double bpm5 = CardioLibrary.calcolicuore.frequenzaCardioGym(bpm);
-            Assert.AreEqual(frequenzaGinnastica, bpm5);
+          
         }
         [TestMethod] //punto2
         public void BpmMinututo1()
@@ -318,16 +271,7 @@ namespace Datacardio.test
             Assert.AreEqual(risultato, battito);
 
 
-            string battito1 = CardioLibrary.calcolicuore.Battito(battiti);
-            Assert.AreEqual(risultato, battito1);
-
-
-            string battito2 = CardioLibrary.calcolicuore.Battito(battiti);
-            Assert.AreEqual(risultato, battito2);
-
-
-            string battito3 = CardioLibrary.calcolicuore.Battito(battiti);
-            Assert.AreEqual(risultato, battito3);
+            
 
 
         }
@@ -372,23 +316,11 @@ namespace Datacardio.test
         public void CalorieData(double peso, double bpm, double anni, double esercizio, double calorie)
         {
 
-            double frequenza1 = CardioLibrary.calcolicuore.ConsumoCalorieUomo(peso, bpm, anni, esercizio); //peso,frequenza,anni,allenamento;
-            Assert.AreEqual(calorie, frequenza1);
+            double CalorieData = CardioLibrary.calcolicuore.ConsumoCalorieUomo(peso, bpm, anni, esercizio); //peso,frequenza,anni,allenamento;
+            Assert.AreEqual(calorie, CalorieData);
 
 
 
-            double frequenza2 = CardioLibrary.calcolicuore.ConsumoCalorieDonna(peso, bpm, anni, esercizio);
-            Assert.AreEqual(calorie, frequenza2);
-
-
-            double frequenza3 = CardioLibrary.calcolicuore.ConsumoCalorieUomo(peso, bpm, anni, esercizio);
-            Assert.AreEqual(calorie, frequenza3);
-
-
-
-
-            double frequenza4 = CardioLibrary.calcolicuore.ConsumoCalorieDonna(peso, bpm, anni, esercizio);
-            Assert.AreEqual(calorie, frequenza4);
 
 
         }
@@ -442,16 +374,9 @@ namespace Datacardio.test
         public void Spesa_enerigetica_CorsaData(double km, double kg, double aspettata)
         {
 
-            double spesa_emnergetica1 = CardioLibrary.calcolicuore.spesa_energetica_corsa(km, kg);
-            Assert.AreEqual(aspettata, spesa_emnergetica1);
-            double spesa_emnergetica2 = CardioLibrary.calcolicuore.spesa_energetica_corsa(km, kg);
-            Assert.AreEqual(aspettata, spesa_emnergetica2);
-            double spesa_emnergetica3 = CardioLibrary.calcolicuore.spesa_energetica_corsa(km, kg);
-            Assert.AreEqual(aspettata, spesa_emnergetica3);
-            double spesa_emnergetica4 = CardioLibrary.calcolicuore.spesa_energetica_corsa(km, kg);
-            Assert.AreEqual(aspettata, spesa_emnergetica4);
-            double spesa_emnergetica5 = CardioLibrary.calcolicuore.spesa_energetica_corsa(km, kg);
-            Assert.AreEqual(aspettata, spesa_emnergetica5);
+            double spesa_emnergeticaData = CardioLibrary.calcolicuore.spesa_energetica_corsa(km, kg);
+            Assert.AreEqual(aspettata, spesa_emnergeticaData);
+          
 
 
         }
@@ -505,16 +430,9 @@ namespace Datacardio.test
         public void Spesa_enerigetica_CamminataData(double km, double kg, double aspettata)
         {
 
-            double spesa_emnergetica1 = CardioLibrary.calcolicuore.spesa_energetica_camminata(km, kg);
-            Assert.AreEqual(aspettata, spesa_emnergetica1);
-            double spesa_emnergetica2 = CardioLibrary.calcolicuore.spesa_energetica_camminata(km, kg);
-            Assert.AreEqual(aspettata, spesa_emnergetica2);
-            double spesa_emnergetica3 = CardioLibrary.calcolicuore.spesa_energetica_camminata(km, kg);
-            Assert.AreEqual(aspettata, spesa_emnergetica3);
-            double spesa_emnergetica4 = CardioLibrary.calcolicuore.spesa_energetica_camminata(km, kg);
-            Assert.AreEqual(aspettata, spesa_emnergetica4);
-            double spesa_emnergetica5 = CardioLibrary.calcolicuore.spesa_energetica_camminata(km, kg);
-            Assert.AreEqual(aspettata, spesa_emnergetica5);
+            double spesa_emnergeticaData = CardioLibrary.calcolicuore.spesa_energetica_camminata(km, kg);
+            Assert.AreEqual(aspettata, spesa_emnergeticaData);
+          
         }
 
         [TestMethod]
@@ -562,16 +480,9 @@ namespace Datacardio.test
         public void Media_bpm(int bpm1, int bpm2, int bpm3, int bpm4, int bpm5, int bpm6, int bpm7, int bpm8, int bpm9, int bpm10, int bpm11, int bpm12, int bpm13, int bpm14, int bpm15, int bpm16, int bpm17, int bpm18, int bpm19, int bpm20, int bpm21, int bpm22, int bpm23, int bpm24, int aspettata)
         {
 
-            int media1 = CardioLibrary.calcolicuore.Media_bpm(bpm1, bpm2, bpm3, bpm4, bpm5, bpm6, bpm7, bpm8, bpm9, bpm10, bpm11, bpm12, bpm13, bpm14, bpm15, bpm16, bpm17, bpm18, bpm19, bpm20, bpm21, bpm22, bpm23, bpm24);
-            Assert.AreEqual(aspettata, media1);
-            int media2 = CardioLibrary.calcolicuore.Media_bpm(bpm1, bpm2, bpm3, bpm4, bpm5, bpm6, bpm7, bpm8, bpm9, bpm10, bpm11, bpm12, bpm13, bpm14, bpm15, bpm16, bpm17, bpm18, bpm19, bpm20, bpm21, bpm22, bpm23, bpm24);
-            Assert.AreEqual(aspettata, media2);
-            int media3 = CardioLibrary.calcolicuore.Media_bpm(bpm1, bpm2, bpm3, bpm4, bpm5, bpm6, bpm7, bpm8, bpm9, bpm10, bpm11, bpm12, bpm13, bpm14, bpm15, bpm16, bpm17, bpm18, bpm19, bpm20, bpm21, bpm22, bpm23, bpm24);
-            Assert.AreEqual(aspettata, media3);
-            int media4 = CardioLibrary.calcolicuore.Media_bpm(bpm1, bpm2, bpm3, bpm4, bpm5, bpm6, bpm7, bpm8, bpm9, bpm10, bpm11, bpm12, bpm13, bpm14, bpm15, bpm16, bpm17, bpm18, bpm19, bpm20, bpm21, bpm22, bpm23, bpm24);
-            Assert.AreEqual(aspettata, media4);
-            int media5 = CardioLibrary.calcolicuore.Media_bpm(bpm1, bpm2, bpm3, bpm4, bpm5, bpm6, bpm7, bpm8, bpm9, bpm10, bpm11, bpm12, bpm13, bpm14, bpm15, bpm16, bpm17, bpm18, bpm19, bpm20, bpm21, bpm22, bpm23, bpm24);
-            Assert.AreEqual(aspettata, media5);
+            int mediaData = CardioLibrary.calcolicuore.Media_bpm(bpm1, bpm2, bpm3, bpm4, bpm5, bpm6, bpm7, bpm8, bpm9, bpm10, bpm11, bpm12, bpm13, bpm14, bpm15, bpm16, bpm17, bpm18, bpm19, bpm20, bpm21, bpm22, bpm23, bpm24);
+            Assert.AreEqual(aspettata, mediaData);
+         
         }
 
         [TestMethod]
@@ -617,16 +528,9 @@ namespace Datacardio.test
         [DataRow(44, 37, 38, 48, 40, 41, 39, 41)]
         public void riposodta(int bpm1, int bpm2, int bpm3, int bpm4, int bpm5, int bpm6, int bpm7, int risposta_aspettata)
         {
-            int MediaRiposo1 = CardioLibrary.calcolicuore.Riposo_bpm(bpm1, bpm2, bpm3, bpm4, bpm5, bpm6, bpm7);
-            Assert.AreEqual(risposta_aspettata, MediaRiposo1);
-            int MediaRiposo2 = CardioLibrary.calcolicuore.Riposo_bpm(bpm1, bpm2, bpm3, bpm4, bpm5, bpm6, bpm7);
-            Assert.AreEqual(risposta_aspettata, MediaRiposo2);
-            int MediaRiposo3 = CardioLibrary.calcolicuore.Riposo_bpm(bpm1, bpm2, bpm3, bpm4, bpm5, bpm6, bpm7);
-            Assert.AreEqual(risposta_aspettata, MediaRiposo3);
-            int MediaRiposo4 = CardioLibrary.calcolicuore.Riposo_bpm(bpm1, bpm2, bpm3, bpm4, bpm5, bpm6, bpm7);
-            Assert.AreEqual(risposta_aspettata, MediaRiposo4);
-            int MediaRiposo5 = CardioLibrary.calcolicuore.Riposo_bpm(bpm1, bpm2, bpm3, bpm4, bpm5, bpm6, bpm7);
-            Assert.AreEqual(risposta_aspettata, MediaRiposo5);
+            int MediaRiposoData = CardioLibrary.calcolicuore.Riposo_bpm(bpm1, bpm2, bpm3, bpm4, bpm5, bpm6, bpm7);
+            Assert.AreEqual(risposta_aspettata, MediaRiposoData);
+        
         }
         [TestMethod]
         public void Variabilità1()
@@ -671,17 +575,11 @@ namespace Datacardio.test
         [DataRow(53, 3.18)]
         public void VariabilitàData(double bpm, double risposta_aspettata)
         {
-            double Variabilità1 = CardioLibrary.calcolicuore.Variabilità_bpm(bpm);
-            Assert.AreEqual(risposta_aspettata, Variabilità1);
-            double Variabilità2 = CardioLibrary.calcolicuore.Variabilità_bpm(bpm);
-            Assert.AreEqual(risposta_aspettata, Variabilità2);
-            double Variabilità3 = CardioLibrary.calcolicuore.Variabilità_bpm(bpm);
-            Assert.AreEqual(risposta_aspettata, Variabilità3);
-            double Variabilità4 = CardioLibrary.calcolicuore.Variabilità_bpm(bpm);
-            Assert.AreEqual(risposta_aspettata, Variabilità4);
-            double Variabilità5 = CardioLibrary.calcolicuore.Variabilità_bpm(bpm);
-            Assert.AreEqual(risposta_aspettata, Variabilità5);
+            double VariabilitàData = CardioLibrary.calcolicuore.Variabilità_bpm(bpm);
+            Assert.AreEqual(risposta_aspettata, VariabilitàData);
+         
 
         }
+        
     }
 }

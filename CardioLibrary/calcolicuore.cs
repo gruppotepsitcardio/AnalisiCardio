@@ -9,11 +9,6 @@ namespace CardioLibrary
         public static int Cardio(int anni)
         {
             int bpmMax = 220 - anni;
-            if (bpmMax > 0)
-            {
-                return bpmMax;
-            }
-
             return bpmMax;
 
         }
@@ -24,7 +19,6 @@ namespace CardioLibrary
         }
         public static int frequenzaCardiomin(int bpmMax)
         {
-
             int min = (70 * bpmMax / 100);
             return min;
         }
@@ -105,7 +99,7 @@ namespace CardioLibrary
             double Variabilità = bpm * 60 / 1000;
             return Variabilità;
         }
-
+        
 
 
     }
